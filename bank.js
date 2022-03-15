@@ -22,31 +22,31 @@ function statement()
     return this;
 }
 
-function PiggyBank()
+function Bank()
 {
     this.balance = 0;
     this.lt = 0;
 }
 
-PiggyBank.prototype.deposit = deposit;
+Bank.prototype.deposit = deposit;
 
-PiggyBank.prototype.withdraw = withdraw;
+Bank.prototype.withdraw = withdraw;
 
-PiggyBank.prototype.statement = statement;
+Bank.prototype.statement = statement;
 
 console.log("Behold the chaining");
 
-var pg1 = new PiggyBank();
+var pg1 = new Bank();
 
 pg1.deposit(100).statement().withdraw(50).statement().withdraw(10).
 
 statement();
 
-new PiggyBank().deposit(200).statement().withdraw(100).statement().
+new Bank().deposit(200).statement().withdraw(100).statement().
 
 withdraw(50).statement();
 
-var pg3 = new PiggyBank();
+var pg3 = new Bank();
 
 pg3.deposit(300).statement().withdraw(200).statement().withdraw(100).
 
